@@ -58,7 +58,8 @@ class KnotDrawingArea(gtk.DrawingArea):
             if self.knot_model.vertices[0].distance(v) <= self.VERTEX_RADIUS:
                 v = self.knot_model.vertices[0]
 
-            self.knot_model.append_vertex(v, over)
+            if self.knot_model.vertices[-1] != v:
+                self.knot_model.append_vertex(v, over)
 
     def _configure_cb(self, widget, event):
         self.width = event.width
@@ -179,7 +180,10 @@ class MainWindow(gtk.Window):
         self.connect('destroy', gtk.main_quit)
         
         self.ui_builder = ui_builder = gtk.Builder()
-        ui_builder.add_from_file('knoteasy.ui')
+
+        import os.path
+        ui_builder.add_from_file(os.path.join(os.path.dirname(__file__),
+        'knoteasy.ui'))
         
         main_vbox = ui_builder.get_object('knoteasy_main_vbox')    
         main_vbox.show()
