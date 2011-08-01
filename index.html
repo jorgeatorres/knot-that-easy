@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>Knot (that) Easy</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <style type="text/css">
+        body {
+            font-family: helvetica, sans-serif;
+            font-size: 11pt;
+            width: 950px;
+            text-align: justify;
+            margin: 20px auto;
+            line-height: 1.2;
+        }
+
+        h1, h2 {
+            margin-left: -10px;
+            font-family: 'monaco', monospace;
+        }
+
+        a, a:active, a:visited {
+            color: #1240ab;
+        }
+
+        ul.screenshots {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.screenshots:after {
+            height: 0;
+            display: block;
+            content: '.';
+            clear: both;
+            visibility: hidden;
+        }
+
+        ul.screenshots li {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            width: 310px;
+            float: left;
+            text-align: center;
+            margin-right: 5px;
+        }
+
+        ul.screenshots li span {
+            color: #696969;
+            font-size: 0.7em;
+        }
+
+        ul.screenshots li img {
+            margin: 0 0 8px 0;
+            padding: 0;
+        }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Knot (that) Easy</h1>
+        
+        <img src="images/trefoil.png" style="float: right; margin: 10px;" title="A diagram of the trefoil knot created in Knot (that) easy" />
+
+        <p>Knot (that) Easy can be used to obtain useful information about a <a href="http://en.wikipedia.org/wiki/Knot_%28mathematics%29">mathematical knot</a> by first being able to &quot;draw&quot; a <a href="http://en.wikipedia.org/wiki/Knots_and_graphs#Knot_diagram">regular diagram</a> of the knot inside the application.</p>
+        <p>This is different than in most other knot theory software that employ a codification (sometimes even specific to the application) and are not very graphical.<br />In Knot (that) easy you can use the mouse to "draw" a regular diagram of the knot and when a crossing is detected you can specify if it is an under-crossing or an over-crossing by left or right-clicking.</p>
+
+        <h2>Features</h2>
+        <p>
+            <ul>
+                <li>Regular diagrams of the knot are created using the mouse in a very graphical manner.</li>
+                <li>Knot (that) easy works with oriented links.</li>
+                <li>It looks pretty nice compared to other knot theory software, with antialiased lines and a modern UI.</li>
+                <li>Knot (that) easy should work on most platforms without trouble because it is written in Python and uses the PyGTK+ library.</li>
+                <li>Performs mirroring and orientation reversing on the diagrams.</li>
+                <li>Calculates alternance, number of crossings and arcs and <i><a href="http://en.wikipedia.org/wiki/Writhe">writhe</a></i> of a diagram.</li>
+                <li>Outputs Gauss and <a href="http://en.wikipedia.org/wiki/Dowker_notation">Dowker</a> codes of the diagram.</li>
+                <li>Gives the Wirtinger presentation of the link's <a href="http://en.wikipedia.org/wiki/Knot_group">knot group</a>.</li>
+                <li>Determines (very inefficiently) if the knot is <a href="http://mathworld.wolfram.com/Three-ColorableKnot.html">3-colorable</a> and gives a possible coloring for each arc.</li>
+                <li>Last, but not least, Knot (that) easy is open source and licensed under the <a href="http://sam.zoy.org/wtfpl/COPYING" target="_blank">WTFPL</a> (Do What The Fuck You Want To Public License). You are free to change it or, hopefully, help to make it better.</li>
+            </ul>
+        </p>
+
+        <h2>Screenshots</h2>
+        <p>
+            <ul class="screenshots">
+               <li>
+                <img src="images/knot-that-easy.png" />
+                <span>Knot (that) easy - Main window</span>
+               </li>
+               <li>
+                <img src="images/knot-that-easy-trefoil.png" />
+                <span>Showing Gauss, Dowker code, Wirtinger presentation, and 3-colorability info for a trefoil knot.</span>
+               </li>
+               <li>
+                <img src="images/knot-that-easy-ugly-unknot.png" />
+                <span>This is a ugly unknot (a link isotopic to the trivial knot).<br />Although no simplifications are made, notice how easily you can remove generators from the Wirtinger presentation and obtain a knot group isomorphic to <b>Z</b>.</span>
+               </li>
+            </ul>
+        </p>
+
+        <h2>Development & Contact</h2>
+        <p>Knot (that) easy development happens in <a href="http://github.com" target="_blank">GitHub</a> at <a href="http://github.com/jorgeatorres/knot-that-easy">http://github.com/jorgeatorres/knot-that-easy</a>. <br />
+        You can obtain a copy of the latest source code with the following command:
+        <pre>
+        $ git clone git@github.com:jorgeatorres/knot-that-easy
+        </pre>
+        </p>
+        <p>You are more than welcome to join and give Knot (that) easy some love.<br />If you have any questions or would like to contact the author, you can do it at <a href="mailto:&#106;&#111;&#114;&#103;&#101;&#064;&#048;&#120;&#102;&#101;&#101;&#049;&#100;&#101;&#097;&#100;&#046;&#111;&#114;&#103;">jtorresh at gmail.com</a>.</p>
+
+        <h2>References / Related Software</h2>
+        <p>
+            <h3>Knot Theory sites</h3>
+            <ul>
+                <li><a href="http://en.wikipedia.org/wiki/Knot_theory" target="_blank">Wikipedia's Knot Theory page</a></li>
+                <li><a href="http://mathworld.wolfram.com/KnotTheory.html" target="_blank">MathWorld's Knot Theory page</a></li>
+                <li><a href="http://katlas.math.toronto.edu/wiki/Main_Page" target="_blank">The Knot Atlas</a></li>
+                <li><a href="http://www.maths.ed.ac.uk/~aar/knots/" target="_blank">Knot theory</a></li>
+                <li><a href="http://www.indiana.edu/~knotinfo/" target="_blank">Table of Knot Invariants</a></li>
+            </ul>
+
+            <h3>Other Knot Theory Software</h3>
+
+            <ul>
+                <li><a href="http://www.math.kobe-u.ac.kp/kodama/knot.html" target="_blank">KNOT Program</a></li>
+                <li><a href="http://www.layer8.co.uk/maths/braids/" target="_blank">Braid Programme</a></li>
+                <li><a href="http://saraswati.uc3m.es/xknots/" target="_blank">xknots</a></li>
+                <li><a href="http://www.math.uic.edu/~t3m" target="_blank">Topology Software</a></li>
+                <li><a href="http://katlas.math.toronto.edu./wiki/The_Mathematica_Package_KnotTheory" target="_blank">The Mathematica Package KnotTheory'</a></li>
+                <li><a href="http://katlas.math.toronto.edu/wiki/Using_the_LinKnot_package" target="_blank">Linknot</a></li>
+                <li><a href="http://knotplot.com/" target="_blank">The KnotPlot site</a></li>
+            </ul>
+        </p>
+
+        <div id="footer">
+        </div>
+    </body>
+
+</html>
